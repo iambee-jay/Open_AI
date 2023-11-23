@@ -1,0 +1,24 @@
+{
+  "name": "open_ai",
+  "version": "1.0.0",
+  "description": "Generate Text and Images with Open_AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iambee-jay/Open_AI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iambee-jay/Open_AI/issues"
+  },
+  "homepage": "https://github.com/iambee-jay/Open_AI#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.0"
+  },
+  "type": "module"
+}
