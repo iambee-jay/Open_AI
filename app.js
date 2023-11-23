@@ -1,14 +1,23 @@
-// const readline = require("readline");
+import {
+  generateMetadata,
+  generateImage,
+} from "./controllers/openaiControllers.js";
 
-import readline from "readline";
+import express from "express";
+import cors from "cors";
 
-// const { generateMetadata } = require("./controllers/openaiControllers");
+const app = express();
 
-import generateMetadata from "./controllers/openaiControllers.js";
-
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
 });
 
-rl.question("Youtube Video Title: \n", generateMetadata);
+//middelware
+app.use(cors());
+app.use(express.json());
+app.use(express.static("public"));
+
+//routes
+
+app.post("/openai/meta", generateMetadata);
+app.post("/openai/image", generateImage);

@@ -3,7 +3,7 @@ import OpenAI from "openai";
 // import "dotenv/config";
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 export default openai;
